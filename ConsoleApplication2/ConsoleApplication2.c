@@ -1,77 +1,31 @@
 ﻿#include "Resh.h"
 int main()
-
+#define A 10
+#define B 5
+#define N(a) (a*a)
 {
 	system("chcp 1251>nul");
 	int atoi(const char* str);
-	printf("Выберите вариант \n1. Cумма \n2.Разность \n3.Умножение \n4.Деление \n5. Объединение двух строк\n");
-	int s;
-	scanf_s("%d", &s);
-	switch (s)
-	{
-	case 1: {
-		system("cls");
-		printf("Сумма\n");
-		int a, b;
-		printf("Введите число: ");
-		scanf_s("%d", &a);
-		printf("Введите число: ");
-		scanf_s("%d", &b);
-		printf("Сумма = %d \n", Summ(a, b));
-		system("pause");
-		system("cls");
-	}
-	case 2:{
+	N(5);
 
-		system("cls");
-		printf("Разность\n");
-		int a, b;
-		printf("Введите число: ");
-		scanf_s("%d", &a);
-		printf("Введите число: ");
-		scanf_s("%d", &b);
-		printf("Разность = %d \n", Razno(a, b));
-		system("pause");
-		system("cls");
-	}
-	case 3:{
+		printf("Сумма = %d \n", Summ(A, B));
+		
 
-		system("cls");
-		printf("Умножение\n");
-		int a, b;
-		printf("Введите число: ");
-		scanf_s("%d", &a);
-		printf("Введите число: ");
-		scanf_s("%d", &b);
-		printf("Произведение = %d \n", Ymno(a, b));
-		system("pause");
-		system("cls");
-	}
-	case 4:{
+		printf("Разность = %d \n", Razno(A, B));	
+	
+		
+		printf("Произведение = %d \n", Ymno(A, B));
 
-		system("cls");
-		printf("Деление\n");
-		int a, b;
-		printf("Введите число: ");
-		scanf_s("%d", &a);
-		printf("Введите число: ");
-		scanf_s("%d", &b);
-		printf("Частное = %f\n", Delen(a, b));
-		system("pause");
-		system("cls");
-	}
-	case 5:{
+	
+		printf("Частное = %f\n", Delen(A, B));
 
-		system("cls");
+		
 		printf("Объединение строк\n");
-
 		char* a = "Добрый день, ";
 		char* b = "пора на пары";
 		printf("%s\n", associations(a, b));
-		system("pause");
-		system("cls");
-	}
-	case 6: {
+
+		
 		char* Str = "652.23brrt"; //Строка для преобразования
 		int Num = 0;                //Переменная для записи результата
 
@@ -83,14 +37,6 @@ int main()
 
 		//Завершение работы программы
 		return 0;
-	}
-    default:{
-		printf("Завершение");
-	}
-	break;
-	}
-
-	return 0;
 }
 char* associations(char* a, char* b)
 {
